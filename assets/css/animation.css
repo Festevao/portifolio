@@ -1,0 +1,16 @@
+.animation_container,
+.animation_container svg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#brSvg * {
+  transition: all 1s ease-in-out;
+}
+
+path[id="BRA601"] {
+  fill: rgb(184, 69, 69);
+  cursor: pointer;
+}
