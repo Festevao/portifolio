@@ -78,15 +78,18 @@ section .image_container .profile-image {
 .contextDivisor {
   background-color: #616161;
   color: white;
-  padding: 1%;
   width: 90%;
   border-radius: 10px;
   text-align: center;
 }
+.contextDivisor h2 {
+  font-size: 1.5vw;
+}
 footer {
   background-color: #333;
   color: white;
-  padding: 1%;
+  padding: 1vw 1vh;
   text-align: center;
   width: 100%;
+  font-size: 1.5vw;
 }
