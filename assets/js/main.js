@@ -17,6 +17,26 @@ function mainScope() {
     `Parado aiii !!! Preciso te avisar que essa página está em processo de contrução, esse processo foi iniciado à ${spendDays} dias, ${spendHours} horas e ${spendMinutes} minutos. E eu to bastante apertado no trabalho terminando ela nos horários vagos, então eu peço um pouco de paciencia hehe. Mas se quiser dar uma espiada pra ver como ta ficando, fica a vontatde !`
   );
 
+  function waitForElm(selector) {
+    return new Promise((resolve) => {
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector));
+      }
+
+      const observer = new MutationObserver((mutations) => {
+        if (document.querySelector(selector)) {
+          resolve(document.querySelector(selector));
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
+    });
+  }
+
   function defineMyAge() {
     const myBDay = new Date("1999-02-04T10:00:00-03:00");
     const now = new Date();
@@ -29,6 +49,16 @@ function mainScope() {
   function buildPage() {
     defineMyAge();
   }
+
+  GitHubCalendar(".calendar", "festevao", {
+    responsive: true,
+    global_stats: false,
+  });
+
+  document.querySelector(".calendar").style.minHeight = "11vh";
+  (async () => {
+    (await waitForElm(".calendar .width-full")).remove();
+  })();
 
   buildPage();
 }
