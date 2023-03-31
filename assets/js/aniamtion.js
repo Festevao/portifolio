@@ -15,6 +15,17 @@ function animationScope() {
     minasPathSelector,
   ];
 
+  const win = window;
+  const doc = document;
+  const docElem = doc.documentElement;
+  const body = doc.getElementsByTagName("body")[0];
+  const x = win.innerWidth || docElem.clientWidth || body.clientWidth;
+  const y = win.innerHeight || docElem.clientHeight || body.clientHeight;
+  if (x <= 750) {
+    animationSvgSelector.setAttribute("width", "377");
+    animationSvgSelector.setAttribute("height", "304");
+  }
+
   function showPingAndHideOthers(index) {
     for (let i = 0; i < mapPings.length; i++) {
       if (i !== index) {
@@ -24,10 +35,12 @@ function animationScope() {
         mapPings[i].style.opacity = "0";
       }
     }
-    mapPings[index].style.fill = "rgb(184, 69, 69)";
-    mapPings[index].style.cursor = "pointer";
     mapPings[index].style.opacity = "1";
-    mapPings[index].style.pointerEvents = "unset";
+    setTimeout(function () {
+      mapPings[index].style.fill = "rgb(184, 69, 69)";
+      mapPings[index].style.pointerEvents = "unset";
+      mapPings[index].style.cursor = "pointer";
+    }, 4100);
   }
 
   mapPings.forEach(function (ping, index) {
