@@ -53,6 +53,7 @@ function mainScope() {
   GitHubCalendar(".calendar", "festevao", {
     responsive: true,
     global_stats: false,
+    tooltips: true,
   });
 
   document.querySelector(".calendar").style.minHeight = "11vh";

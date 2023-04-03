@@ -95,6 +95,16 @@ section .image_container .profile-image {
 .contextDivisor h2 {
   font-size: 1.5vw;
 }
+.subContextDivisor {
+  background-color: transparent;
+  color: #616161;
+  width: 85%;
+  text-align: start;
+  border-bottom: 2px dotted #616161;
+}
+.subContextDivisor h2 {
+  font-size: 1.2vw;
+}
 .calendar {
   width: 90%;
   border-radius: 10px;
