@@ -1,7 +1,7 @@
 function mainScope() {
   const myAgeSelector = document.querySelector("#spanMyAge");
 
-  const initDevDate = new Date("2023-03-27T18:32:14-03:00");
+  const initDevDate = new Date("2023-04-10T18:32:14-03:00");
   const atualDate = new Date();
   const devDiff = atualDate.getTime() - initDevDate.getTime();
 
@@ -14,7 +14,7 @@ function mainScope() {
   const spendMinutes = Math.floor((devDiff % msHour) / msMinute);
 
   alert(
-    `Parado aiii !!! Preciso te avisar que essa página está em processo de contrução, esse processo foi iniciado à ${spendDays} dias, ${spendHours} horas e ${spendMinutes} minutos. E eu to bastante apertado no trabalho terminando ela nos horários vagos, então eu peço um pouco de paciencia hehe. Mas se quiser dar uma espiada pra ver como ta ficando, fica a vontatde !`
+    `Parado aiii !!! Preciso te avisar que essa página está em processo de construção, esse processo foi iniciado à ${spendDays} dias, ${spendHours} horas e ${spendMinutes} minutos. E eu estou bastante apertado no trabalho terminando ela nos horários vagos, então eu peço um pouco de paciencia hehe. Mas se quiser dar uma olhadinha pra ver como está ficando, fique à vontatde!`
   );
 
   function waitForElm(selector) {
