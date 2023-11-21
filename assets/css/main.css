@@ -21,6 +21,7 @@ header {
   justify-content: center;
   align-items: end;
   position: relative;
+  min-height: 10vh;
 }
 .social_icons {
   position: absolute;
@@ -32,7 +33,6 @@ header {
   margin-right: 0.1vw;
 }
 header h1 {
-  font-size: 2vw;
   margin: 1vh 0;
 }
 section {
@@ -46,11 +46,9 @@ section {
   margin-bottom: 20px;
 }
 section h2 {
-  font-size: 1.5vw;
   margin-bottom: 4%;
 }
 section p {
-  font-size: 1.2vw;
   line-height: 1.5;
   text-align: justify;
 }
@@ -92,18 +90,12 @@ section .image_container .profile-image {
   border-radius: 10px;
   text-align: center;
 }
-.contextDivisor h2 {
-  font-size: 1.5vw;
-}
 .subContextDivisor {
   background-color: transparent;
   color: #616161;
   width: 85%;
   text-align: start;
   border-bottom: 2px dotted #616161;
-}
-.subContextDivisor h2 {
-  font-size: 1.2vw;
 }
 .card {
   border: 1px solid #ccc;
@@ -115,6 +107,7 @@ section .image_container .profile-image {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgb(246, 251, 251);
 }
 .cards-conatiner {
   display: flex;
@@ -152,6 +145,68 @@ section .image_container .profile-image {
   width: 100%;
   font-weight: bold;
 }
+body > p {
+  max-width: 80%;
+}
+.networkKnows {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.networkKnowsArea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 25%;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(246, 251, 251);
+}
+.networkKnowsArea h3 {
+  margin: 0;
+  padding: 0;
+}
+.networkKnowsArea hr {
+  width: 100%;
+}
+.networkKnowsAreaContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.networkKnowsAreaContent div {
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+}
+.spec {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.1);
+  max-width: 30%;
+  position: absolute;
+  padding: 15px;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(246, 251, 251);
+}
+.spec h4 {
+  padding: 0;
+  margin: 0;
+}
 .calendar {
   max-width: 70%;
   width: 100%;
@@ -163,5 +218,4 @@ footer {
   padding: 1vw 1vh;
   text-align: center;
   width: 100%;
-  font-size: 1.5vw;
 }
