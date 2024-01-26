@@ -67,7 +67,7 @@ function mainScope() {
   }
   const myAgeSelector = document.querySelector("#spanMyAge");
 
-  const initDevDate = new Date("2023-11-01T18:32:14-03:00");
+  const initDevDate = new Date("2024-01-24T18:32:14-03:00");
   const atualDate = new Date();
   const devDiff = atualDate.getTime() - initDevDate.getTime();
 
